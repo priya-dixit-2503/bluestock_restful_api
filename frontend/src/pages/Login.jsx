@@ -1,47 +1,43 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+function Login({ onLogin }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-    setIsLoading(true);
+    setError('');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log("Login attempt with:", { email, password });
+      const res = await axios.post('http://127.0.0.1:8000/api/login/', {
+        username,
+        password
+      });
 
-      // Simulate successful login
-      localStorage.setItem("isAuthenticated", "true");
-      navigate("/"); // Will implement dashboard route later
+      localStorage.setItem('access_token', res.data.access);
+      onLogin(); // Tell parent we're logged in
+      navigate("/secure"); // Go to secure page
     } catch (err) {
-      setError("Invalid email or password");
-    } finally {
-      setIsLoading(false);
+      console.error('Login failed:', err);
+      setError("Invalid credentials");
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded shadow-md w-full max-w-sm"
-      >
+      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
 
         <input
-          type="email"
-          placeholder="Email"
+          type="text"
+          placeholder="Username"
           className="w-full p-3 mb-4 border rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
 
@@ -52,35 +48,16 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />        {error && (
-          <div className="mb-4 p-2 text-sm text-red-600 bg-red-50 rounded">
-            {error}
-          </div>
-        )}
+        />
 
-        <button
-          type="submit"
-          disabled={isLoading}
-          className={`w-full p-3 rounded text-white ${
-            isLoading
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
-          }`}
-        >
-          {isLoading ? "Logging in..." : "Login"}
+        {error && <div className="mb-4 text-red-600">{error}</div>}
+
+        <button type="submit" className="w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Login
         </button>
-
-        <div className="mt-4 text-center text-sm text-gray-600">
-          Don't have an account?{" "}
-          <button
-            type="button"
-            onClick={() => navigate("/signup")}
-            className="text-blue-600 hover:text-blue-800"
-          >
-            Sign up here
-          </button>
-        </div>
       </form>
     </div>
   );
 }
+
+export default Login;
