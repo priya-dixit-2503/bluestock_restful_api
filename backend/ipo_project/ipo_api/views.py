@@ -91,8 +91,8 @@ def ipo_detail(request, pk):
 @api_view(['GET','POST'])
 def ipo_list(request):
      if request.method == 'GET':
-        ipo = IPO.objects.all()
-        serializer = IPOSerializer(ipo, many=True)
+        ipo = Company.objects.all()
+        serializer = CompanySerializer(ipo, many=True)
         return Response(serializer.data)
 
      elif request.method == 'POST':
