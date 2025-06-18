@@ -147,11 +147,13 @@ SIMPLE_JWT = {
 }
 
 # CORS Settings
-CORS_ALLOW_ALL_ORIGINS = False  # More secure
+CORS_ALLOW_ALL_ORIGINS = True  # More secure
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite default port
     "http://127.0.0.1:5173",
+    "http://localhost:3000",
 ]
 
 # Additional CORS settings
