@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import Company, IPO, Document
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -80,3 +81,21 @@ class CompanySerializer(serializers.ModelSerializer):
                 Document.objects.create(ipo=ipo, **doc_data)
 
         return company
+    
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+
+        data.update({
+            'user': {
+                'id': self.user.id,
+                'username': self.user.username,
+                'email': self.user.email
+            }
+        })
+
+        return data
+    
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
