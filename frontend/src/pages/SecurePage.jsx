@@ -1,11 +1,17 @@
 import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import { Circles } from 'react-loader-spinner';
 
 function SecurePage() {
   const [ipos, setIpos] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState(null);
+  const [loadingFetch, setLoadingFetch] = useState(false);
+  const [loadingCreate, setLoadingCreate] = useState(false);
+  const [loadingUpdate, setLoadingUpdate] = useState(false);
+  const [loadingDeleteId, setLoadingDeleteId] = useState(null);
+
   const [newCompany, setNewCompany] = useState({
     company_name: '',
     company_logo: '',
@@ -31,26 +37,29 @@ function SecurePage() {
   const token = localStorage.getItem('access_token');
 
   const fetchIPOs = useCallback(() => {
-  axios.get('http://127.0.0.1:8000/api/ipo/', {
-    headers: { Authorization: `Bearer ${token}` }
-  }).then(res => {
-    // Filter only companies where ipos array is not empty
-    const filtered = res.data.filter(item => item.ipos && item.ipos.length > 0);
-    setIpos(filtered);
-  });
-}, [token]);
+    setLoadingFetch(true);
+    axios.get('http://127.0.0.1:8000/api/ipo/', {
+      headers: { Authorization: `Bearer ${token}` }
+    }).then(res => {
+      const filtered = res.data.filter(item => item.ipos && item.ipos.length > 0);
+      setIpos(filtered);
+    }).finally(() => setLoadingFetch(false));
+  }, [token]);
 
   useEffect(() => {
     if (token) fetchIPOs();
   }, [fetchIPOs]);
 
   const handleDelete = (id) => {
+    setLoadingDeleteId(id);
     axios.delete(`http://127.0.0.1:8000/api/ipo/${id}/`, {
       headers: { Authorization: `Bearer ${token}` }
-    }).then(fetchIPOs);
+    }).then(fetchIPOs)
+      .finally(() => setLoadingDeleteId(null));
   };
 
   const handleUpdate = (id) => {
+    setLoadingUpdate(true);
     axios.put(`http://127.0.0.1:8000/api/ipo/${id}/`, editData, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -62,11 +71,12 @@ function SecurePage() {
       fetchIPOs();
     }).catch((err) => {
       console.error("Update error:", err);
-    });
+    }).finally(() => setLoadingUpdate(false));
   };
 
   const handleCreate = (e) => {
     e.preventDefault();
+    setLoadingCreate(true);
     axios.post(`http://127.0.0.1:8000/api/ipo/`, newCompany, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -96,7 +106,7 @@ function SecurePage() {
         ]
       });
       fetchIPOs();
-    });
+    }).finally(() => setLoadingCreate(false));
   };
 
   return (
@@ -175,56 +185,75 @@ function SecurePage() {
               />
             );
           })}
-          <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
-            Submit IPO
+          <button
+            type="submit"
+            className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center"
+            disabled={loadingCreate}
+          >
+            {loadingCreate ? (
+              <Circles height={20} width={20} color="#fff" />
+            ) : (
+              "Submit IPO"
+            )}
           </button>
         </form>
       )}
 
-      <table className="table-auto w-full border-collapse border border-gray-400">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border p-2">ID</th>
-            <th className="border p-2">Company</th>
-            <th className="border p-2">Price Band</th>
-            <th className="border p-2">Open</th>
-            <th className="border p-2">Close</th>
-            <th className="border p-2">IPO Price</th>
-            <th className="border p-2">Current Price</th>
-            <th className="border p-2">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ipos.map(ipo => (
-            <tr key={ipo.id}>
-              <td className="border p-2">{ipo.id}</td>
-              <td className="border p-2">{ipo.company_name}</td>
-              <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
-              <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
-              <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
-              <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
-              <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
-              <td className="border p-2">
-                <button
-                  className="bg-yellow-500 text-white px-2 py-1 mr-2"
-                  onClick={() => {
-                    setEditData(ipo.ipos[0]);
-                    setEditingId(ipo.ipos[0]?.id);
-                  }}
-                >
-                  Edit
-                </button>
-                <button
-                  className="bg-red-600 text-white px-2 py-1"
-                  onClick={() => handleDelete(ipo.ipos[0]?.id)}
-                >
-                  Delete
-                </button>
-              </td>
+      {loadingFetch ? (
+        <div className="flex justify-center items-center my-6">
+          <Circles height={40} width={40} color="#4fa94d" />
+        </div>
+      ) : (
+        <table className="table-auto w-full border-collapse border border-gray-400">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border p-2">ID</th>
+              <th className="border p-2">Company</th>
+              <th className="border p-2">Price Band</th>
+              <th className="border p-2">Open</th>
+              <th className="border p-2">Close</th>
+              <th className="border p-2">IPO Price</th>
+              <th className="border p-2">Current Price</th>
+              <th className="border p-2">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {ipos.map(ipo => (
+              <tr key={ipo.id}>
+                <td className="border p-2">{ipo.id}</td>
+                <td className="border p-2">{ipo.company_name}</td>
+                <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
+                <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
+                <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
+                <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
+                <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
+                <td className="border p-2">
+                  <button
+                    className="bg-yellow-500 text-white px-2 py-1 mr-2"
+                    onClick={() => {
+                      setEditData(ipo.ipos[0]);
+                      setEditingId(ipo.ipos[0]?.id);
+                    }}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="bg-red-600 text-white px-2 py-1 flex items-center"
+                    onClick={() => handleDelete(ipo.ipos[0]?.id)}
+                    disabled={loadingDeleteId === ipo.ipos[0]?.id}
+                  >
+                    {loadingDeleteId === ipo.ipos[0]?.id ? (
+                      <Circles height={20} width={20} color="#fff" />
+                    ) : (
+                      "Delete"
+                    )}
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
 
       {editingId && editData && (
         <div className="mt-6 border p-4 rounded shadow bg-yellow-50">
@@ -266,9 +295,14 @@ function SecurePage() {
           />
           <button
             onClick={() => handleUpdate(editingId)}
-            className="bg-green-600 text-white px-4 py-2 mr-2 rounded"
+            className="bg-green-600 text-white px-4 py-2 mr-2 rounded flex items-center justify-center"
+            disabled={loadingUpdate}
           >
-            Save
+            {loadingUpdate ? (
+              <Circles height={20} width={20} color="#fff" />
+            ) : (
+              "Save"
+            )}
           </button>
           <button
             onClick={() => {
