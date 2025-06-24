@@ -511,3 +511,27 @@ INFO 2025-06-24 16:15:54,256 root | Called GET API list
 INFO 2025-06-24 16:15:54,281 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
 INFO 2025-06-24 16:18:33,160 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_project\settings.py changed, reloading.
 INFO 2025-06-24 16:18:34,609 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 18:41:30,455 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 18:42:00,451 django.server | "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-06-24 18:42:02,300 django.server | "POST /api/login/ HTTP/1.1" 200 564
+INFO 2025-06-24 18:42:02,349 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-24 18:42:02,357 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-24 18:42:02,441 root | Called GET API list
+INFO 2025-06-24 18:42:02,468 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 18:42:02,550 root | Called GET API list
+INFO 2025-06-24 18:42:02,554 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 18:45:36,790 root | Called GET API list
+INFO 2025-06-24 18:45:36,793 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 18:45:36,876 root | Called GET API list
+INFO 2025-06-24 18:45:36,879 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 19:26:43,449 django.server | "POST /api/login/ HTTP/1.1" 200 564
+INFO 2025-06-24 19:26:43,569 root | Called GET API list
+INFO 2025-06-24 19:26:43,573 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 19:26:43,645 root | Called GET API list
+INFO 2025-06-24 19:26:43,648 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 20:13:55,040 root | Called GET API list
+INFO 2025-06-24 20:13:55,045 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 20:15:02,240 root | Called GET API list
+INFO 2025-06-24 20:15:02,245 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52
+INFO 2025-06-24 20:15:02,345 root | Called GET API list
+INFO 2025-06-24 20:15:02,348 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 52

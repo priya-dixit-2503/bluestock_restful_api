@@ -218,46 +218,77 @@ function SecurePage() {
                 <th className="border p-2">Price Band</th>
                 <th className="border p-2">Open</th>
                 <th className="border p-2">Close</th>
+                <th className="border p-2">Issue Size</th>
+                <th className="border p-2">Issue Type</th>
+                <th className="border p-2">Listing Date</th>
+                <th className="border p-2">Status</th>
                 <th className="border p-2">IPO Price</th>
+                <th className="border p-2">Listing Price</th>
+                <th className="border p-2">Listing Gain</th>
                 <th className="border p-2">Current Price</th>
+                <th className="border p-2">Current Return</th>
+                <th className="border p-2">RHP</th>
+                <th className="border p-2">DRHP</th>
                 <th className="border p-2">Actions</th>
               </tr>
             </thead>
             <tbody>
-              {ipos.map(ipo => (
-                <tr key={ipo.id}>
-                  <td className="border p-2">{ipo.id}</td>
-                  <td className="border p-2">{ipo.company_name}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
-                  <td className="border p-2">
-                    <button
-                      className="bg-yellow-500 text-white px-2 py-1 mr-2"
-                      onClick={() => {
-                        setEditData(ipo.ipos[0]);
-                        setEditingId(ipo.ipos[0]?.id);
-                      }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="bg-red-600 text-white px-2 py-1 flex items-center"
-                      onClick={() => handleDelete(ipo.ipos[0]?.id)}
-                      disabled={loadingDeleteId === ipo.ipos[0]?.id}
-                    >
-                      {loadingDeleteId === ipo.ipos[0]?.id ? (
-                        <Circles height={20} width={20} color="#fff" />
-                      ) : (
-                        "Delete"
+              {ipos.map(ipo => {
+                const data = ipo.ipos[0]; // shorthand for easier reading
+                return (
+                  <tr key={ipo.id}>
+                    <td className="border p-2">{ipo.id}</td>
+                    <td className="border p-2">{ipo.company_name}</td>
+                    <td className="border p-2">{data.price_band}</td>
+                    <td className="border p-2">{data.open_date}</td>
+                    <td className="border p-2">{data.close_date}</td>
+                    <td className="border p-2">{data.issue_size}</td>
+                    <td className="border p-2">{data.issue_type}</td>
+                    <td className="border p-2">{data.listing_date}</td>
+                    <td className="border p-2">{data.status}</td>
+                    <td className="border p-2">{data.ipo_price}</td>
+                    <td className="border p-2">{data.listing_price}</td>
+                    <td className="border p-2">{data.listing_gain}%</td>
+                    <td className="border p-2">{data.current_market_price}</td>
+                    <td className="border p-2">{data.current_return}%</td>
+                    <td className="border p-2">
+                      {data.documents?.[0]?.rhp_pdf && (
+                        <a href={data.documents[0].rhp_pdf} className="text-blue-500 underline" target="_blank">View</a>
                       )}
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className="border p-2">
+                      {data.documents?.[0]?.drhp_pdf && (
+                        <a href={data.documents[0].drhp_pdf} className="text-blue-500 underline" target="_blank">View</a>
+                      )}
+                    </td>
+                    <td className="border p-2">
+                      <button
+                        className="bg-yellow-500 text-white px-2 py-1 mr-2"
+                        onClick={() => {
+                          setEditData(data);
+                          setEditingId(data.id);
+                        }}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="bg-red-600 text-white px-2 py-1 flex items-center"
+                        onClick={() => handleDelete(data.id)}
+                        disabled={loadingDeleteId === data.id}
+                      >
+                        {loadingDeleteId === data.id ? (
+                          <Circles height={20} width={20} color="#fff" />
+                        ) : (
+                          "Delete"
+                        )}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
+
+
           </table>
 
           {totalPages > 1 && (
