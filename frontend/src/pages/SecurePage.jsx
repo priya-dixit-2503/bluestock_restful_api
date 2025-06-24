@@ -12,6 +12,9 @@ function SecurePage() {
   const [loadingUpdate, setLoadingUpdate] = useState(false);
   const [loadingDeleteId, setLoadingDeleteId] = useState(null);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
   const [newCompany, setNewCompany] = useState({
     company_name: '',
     company_logo: '',
@@ -36,25 +39,27 @@ function SecurePage() {
 
   const token = localStorage.getItem('access_token');
 
-  const fetchIPOs = useCallback(() => {
+  const fetchIPOs = useCallback((page = 1) => {
     setLoadingFetch(true);
-    axios.get('http://127.0.0.1:8000/api/ipo/', {
+    axios.get(`http://127.0.0.1:8000/api/ipo/paginated/?page=${page}`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => {
-      const filtered = res.data.filter(item => item.ipos && item.ipos.length > 0);
+      const filtered = res.data.results.filter(item => item.ipos && item.ipos.length > 0);
       setIpos(filtered);
+      setCurrentPage(page);
+      setTotalPages(Math.ceil(res.data.count / 5)); // adjust if page_size changes
     }).finally(() => setLoadingFetch(false));
   }, [token]);
 
   useEffect(() => {
-    if (token) fetchIPOs();
+    if (token) fetchIPOs(1);
   }, [fetchIPOs]);
 
   const handleDelete = (id) => {
     setLoadingDeleteId(id);
     axios.delete(`http://127.0.0.1:8000/api/ipo/${id}/`, {
       headers: { Authorization: `Bearer ${token}` }
-    }).then(fetchIPOs)
+    }).then(() => fetchIPOs(currentPage))
       .finally(() => setLoadingDeleteId(null));
   };
 
@@ -68,7 +73,7 @@ function SecurePage() {
     }).then(() => {
       setEditingId(null);
       setEditData(null);
-      fetchIPOs();
+      fetchIPOs(currentPage);
     }).catch((err) => {
       console.error("Update error:", err);
     }).finally(() => setLoadingUpdate(false));
@@ -105,7 +110,7 @@ function SecurePage() {
           }
         ]
       });
-      fetchIPOs();
+      fetchIPOs(currentPage);
     }).finally(() => setLoadingCreate(false));
   };
 
@@ -204,55 +209,71 @@ function SecurePage() {
           <Circles height={40} width={40} color="#4fa94d" />
         </div>
       ) : (
-        <table className="table-auto w-full border-collapse border border-gray-400">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="border p-2">ID</th>
-              <th className="border p-2">Company</th>
-              <th className="border p-2">Price Band</th>
-              <th className="border p-2">Open</th>
-              <th className="border p-2">Close</th>
-              <th className="border p-2">IPO Price</th>
-              <th className="border p-2">Current Price</th>
-              <th className="border p-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ipos.map(ipo => (
-              <tr key={ipo.id}>
-                <td className="border p-2">{ipo.id}</td>
-                <td className="border p-2">{ipo.company_name}</td>
-                <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
-                <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
-                <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
-                <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
-                <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
-                <td className="border p-2">
-                  <button
-                    className="bg-yellow-500 text-white px-2 py-1 mr-2"
-                    onClick={() => {
-                      setEditData(ipo.ipos[0]);
-                      setEditingId(ipo.ipos[0]?.id);
-                    }}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className="bg-red-600 text-white px-2 py-1 flex items-center"
-                    onClick={() => handleDelete(ipo.ipos[0]?.id)}
-                    disabled={loadingDeleteId === ipo.ipos[0]?.id}
-                  >
-                    {loadingDeleteId === ipo.ipos[0]?.id ? (
-                      <Circles height={20} width={20} color="#fff" />
-                    ) : (
-                      "Delete"
-                    )}
-                  </button>
-                </td>
+        <>
+          <table className="table-auto w-full border-collapse border border-gray-400">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border p-2">ID</th>
+                <th className="border p-2">Company</th>
+                <th className="border p-2">Price Band</th>
+                <th className="border p-2">Open</th>
+                <th className="border p-2">Close</th>
+                <th className="border p-2">IPO Price</th>
+                <th className="border p-2">Current Price</th>
+                <th className="border p-2">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {ipos.map(ipo => (
+                <tr key={ipo.id}>
+                  <td className="border p-2">{ipo.id}</td>
+                  <td className="border p-2">{ipo.company_name}</td>
+                  <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
+                  <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
+                  <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
+                  <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
+                  <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
+                  <td className="border p-2">
+                    <button
+                      className="bg-yellow-500 text-white px-2 py-1 mr-2"
+                      onClick={() => {
+                        setEditData(ipo.ipos[0]);
+                        setEditingId(ipo.ipos[0]?.id);
+                      }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="bg-red-600 text-white px-2 py-1 flex items-center"
+                      onClick={() => handleDelete(ipo.ipos[0]?.id)}
+                      disabled={loadingDeleteId === ipo.ipos[0]?.id}
+                    >
+                      {loadingDeleteId === ipo.ipos[0]?.id ? (
+                        <Circles height={20} width={20} color="#fff" />
+                      ) : (
+                        "Delete"
+                      )}
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-4 space-x-2">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i + 1}
+                  onClick={() => fetchIPOs(i + 1)}
+                  className={`px-3 py-1 border rounded ${currentPage === i + 1 ? 'bg-blue-600 text-white' : 'bg-white'}`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       {editingId && editData && (
