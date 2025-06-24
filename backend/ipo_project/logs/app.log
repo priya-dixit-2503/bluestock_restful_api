@@ -1,0 +1,513 @@
+INFO 2025-06-23 22:02:06,496 autoreload Watching for file changes with StatReloader
+INFO 2025-06-23 22:02:45,423 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:02:45,479 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:05:15,051 autoreload D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:05:15,927 autoreload Watching for file changes with StatReloader
+INFO 2025-06-23 22:05:22,805 autoreload D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:05:23,633 autoreload Watching for file changes with StatReloader
+INFO 2025-06-23 22:05:30,067 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:05:30,129 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:06:53,504 autoreload D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:06:54,286 autoreload Watching for file changes with StatReloader
+INFO 2025-06-23 22:07:01,769 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:07:01,842 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:07:24,797 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:07:24,849 basehttp "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-23 22:07:47,428 basehttp "OPTIONS /api/ipo/9/ HTTP/1.1" 200 0
+INFO 2025-06-23 22:07:47,540 basehttp "PUT /api/ipo/9/ HTTP/1.1" 200 388
+INFO 2025-06-23 22:07:47,601 basehttp "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:10:58,622 autoreload D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_project\settings.py changed, reloading.
+INFO 2025-06-23 22:10:59,551 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:11:28,472 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:11:29,237 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:11:34,795 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:11:34,797 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:11:34,847 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:11:34,861 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:12:03,187 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:12:09,168 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:12:09,184 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:12:09,231 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:12:09,242 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:13:14,129 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_project\settings.py changed, reloading.
+INFO 2025-06-23 22:13:14,916 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:13:20,504 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:13:20,521 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:13:20,570 ipo_api.views | Called GET API list
+INFO 2025-06-23 22:13:20,579 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:15:21,796 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:15:22,702 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:15:28,494 root | Called GET API list
+INFO 2025-06-23 22:15:28,509 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:15:28,558 root | Called GET API list
+INFO 2025-06-23 22:15:28,570 django.server | "GET /api/ipo/ HTTP/1.1" 200 720
+INFO 2025-06-23 22:16:02,529 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-23 22:16:02,595 django.server | "PUT /api/ipo/9/ HTTP/1.1" 200 389
+INFO 2025-06-23 22:16:02,645 root | Called GET API list
+INFO 2025-06-23 22:16:02,653 django.server | "GET /api/ipo/ HTTP/1.1" 200 721
+INFO 2025-06-23 22:16:44,507 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-23 22:16:44,528 django.server | "PUT /api/ipo/9/ HTTP/1.1" 200 401
+INFO 2025-06-23 22:16:44,583 root | Called GET API list
+INFO 2025-06-23 22:16:44,592 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-23 22:16:55,517 root | Called PUT API for id
+NoneType: None
+WARNING 2025-06-23 22:16:55,522 django.request | Bad Request: /api/ipo/9/
+WARNING 2025-06-23 22:16:55,522 django.server | "PUT /api/ipo/9/ HTTP/1.1" 400 83
+INFO 2025-06-23 22:34:43,294 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 22:34:44,231 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 22:35:07,876 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:35:07,934 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:35:11,322 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:35:11,371 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:38:39,080 django.server | "POST /api/login/ HTTP/1.1" 200 559
+INFO 2025-06-23 22:38:39,212 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:38:39,280 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:41:53,187 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-23 22:41:53,252 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:41:53,309 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+WARNING 2025-06-23 22:53:04,514 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 22:53:04,514 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 22:53:04,515 django.server | "GET /api/ipo/ HTTP/1.1" 401 58
+WARNING 2025-06-23 22:53:04,515 django.server | "GET /api/ipo/ HTTP/1.1" 401 58
+INFO 2025-06-23 22:54:22,548 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:54:22,548 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:57:18,240 django.server | "POST /api/login/ HTTP/1.1" 200 559
+INFO 2025-06-23 22:57:18,311 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 22:57:18,381 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+WARNING 2025-06-23 23:07:08,490 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:07:08,490 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:07:08,490 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-23 23:07:08,490 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-23 23:15:11,949 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:15:11,951 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-23 23:15:11,963 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:15:11,963 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-23 23:16:35,494 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:16:35,494 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-23 23:16:35,553 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:16:57,665 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 23:16:58,453 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 23:17:11,783 root | Called GET API list
+INFO 2025-06-23 23:17:11,802 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-23 23:17:11,849 root | Called GET API list
+INFO 2025-06-23 23:17:11,857 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-23 23:24:13,879 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 23:24:14,551 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 23:24:46,403 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 23:24:47,123 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 23:25:13,914 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 23:25:14,607 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-23 23:25:29,369 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:25:29,431 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+WARNING 2025-06-23 23:30:29,522 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:30:29,522 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-23 23:30:29,522 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:30:29,522 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-23 23:30:29,584 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:30:29,644 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+WARNING 2025-06-23 23:31:00,208 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-23 23:31:00,208 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-23 23:31:00,640 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:31:00,711 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:31:18,492 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-23 23:31:18,500 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-23 23:31:18,573 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:31:18,630 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-23 23:45:57,188 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-23 23:45:57,825 django.utils.autoreload | Watching for file changes with StatReloader
+WARNING 2025-06-24 00:05:43,501 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:43,501 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:43,501 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:05:43,501 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:05:43,501 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:43,505 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:43,505 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:05:43,505 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:05:52,788 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:52,788 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:05:52,793 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:05:52,793 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:07:17,484 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:07:17,484 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:07:17,495 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:07:17,495 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:07:22,958 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:07:22,958 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:07:22,965 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:07:22,965 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-24 00:07:55,328 django.server | "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-06-24 00:07:56,024 django.server | "POST /api/login/ HTTP/1.1" 200 559
+INFO 2025-06-24 00:07:56,092 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-24 00:07:56,145 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+WARNING 2025-06-24 00:09:36,482 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:09:36,482 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+WARNING 2025-06-24 00:09:36,484 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 00:09:36,484 django.server | "GET /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-24 00:09:36,543 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-24 00:09:36,597 django.server | "GET /api/ipo/ HTTP/1.1" 200 453
+INFO 2025-06-24 00:10:05,153 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 00:10:06,086 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 00:10:13,036 root | Called GET API list
+INFO 2025-06-24 00:10:13,055 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 00:10:13,099 root | Called GET API list
+INFO 2025-06-24 00:10:13,111 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 00:21:14,316 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 00:21:15,168 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 00:21:27,061 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 00:21:27,875 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 00:21:37,546 root | Called GET API list
+INFO 2025-06-24 00:21:37,563 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 00:21:37,599 root | Called GET API list
+INFO 2025-06-24 00:21:37,617 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 14:29:14,086 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 14:30:26,329 django.server | "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-06-24 14:30:27,646 django.server | "POST /api/login/ HTTP/1.1" 200 559
+INFO 2025-06-24 14:30:27,673 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-24 14:30:27,678 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-24 14:30:27,753 root | Called GET API list
+INFO 2025-06-24 14:30:27,772 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 14:30:27,838 root | Called GET API list
+INFO 2025-06-24 14:30:27,855 django.server | "GET /api/ipo/ HTTP/1.1" 200 733
+INFO 2025-06-24 14:30:42,618 django.server | "OPTIONS /api/ipo/9/ HTTP/1.1" 200 0
+INFO 2025-06-24 14:30:42,705 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-24 14:30:42,776 django.server | "PUT /api/ipo/9/ HTTP/1.1" 200 387
+INFO 2025-06-24 14:30:42,860 root | Called GET API list
+INFO 2025-06-24 14:30:42,876 django.server | "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-24 14:41:29,922 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 14:41:31,759 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 14:43:43,294 root | Called GET API list
+ERROR 2025-06-24 14:43:43,541 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:43:43,556 django.server | "GET /api/ipo/ HTTP/1.1" 500 75095
+INFO 2025-06-24 14:43:43,562 root | Called GET API list
+ERROR 2025-06-24 14:43:43,667 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:43:43,667 django.server | "GET /api/ipo/ HTTP/1.1" 500 75095
+INFO 2025-06-24 14:45:25,283 django.server | "OPTIONS /api/ipo/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-24 14:45:25,283 root | Called GET API list
+ERROR 2025-06-24 14:45:25,393 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:45:25,393 django.server | "GET /api/ipo/?page=1 HTTP/1.1" 500 75439
+INFO 2025-06-24 14:46:10,294 root | Called GET API list
+ERROR 2025-06-24 14:46:10,399 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:46:10,399 django.server | "GET /api/ipo/?page=1 HTTP/1.1" 500 75439
+INFO 2025-06-24 14:54:32,282 root | Called GET API list
+ERROR 2025-06-24 14:54:32,391 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:54:32,391 django.server | "GET /api/ipo/ HTTP/1.1" 500 75095
+INFO 2025-06-24 14:54:32,407 root | Called GET API list
+ERROR 2025-06-24 14:54:32,502 django.request | Internal Server Error: /api/ipo/
+Traceback (most recent call last):
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New_Repo\bluestock_restful_api\myenv\Lib\site-packages\rest_framework\response.py", line 59, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+ERROR 2025-06-24 14:54:32,502 django.server | "GET /api/ipo/ HTTP/1.1" 500 75095
+INFO 2025-06-24 14:54:56,480 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 14:54:57,702 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 14:55:07,662 root | Called GET API list
+INFO 2025-06-24 14:55:07,685 django.server | "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-24 14:55:07,761 root | Called GET API list
+INFO 2025-06-24 14:55:07,779 django.server | "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-24 14:55:25,274 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-24 14:55:25,359 django.server | "PUT /api/ipo/9/ HTTP/1.1" 200 387
+INFO 2025-06-24 14:55:25,538 root | Called GET API list
+INFO 2025-06-24 14:55:25,554 django.server | "GET /api/ipo/ HTTP/1.1" 200 719
+INFO 2025-06-24 14:59:33,289 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-24 14:59:33,294 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+WARNING 2025-06-24 14:59:33,323 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 14:59:33,323 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 14:59:33,343 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 14:59:33,343 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+INFO 2025-06-24 15:02:13,726 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\views.py changed, reloading.
+INFO 2025-06-24 15:02:15,334 django.utils.autoreload | Watching for file changes with StatReloader
+WARNING 2025-06-24 15:02:26,740 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:02:26,745 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:02:26,752 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:02:26,752 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:02:28,270 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:02:28,274 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:02:28,274 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:02:28,287 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+INFO 2025-06-24 15:03:37,471 root | Called POST API list
+NoneType: None
+WARNING 2025-06-24 15:03:37,528 django.request | Bad Request: /api/ipo/
+WARNING 2025-06-24 15:03:37,528 django.server | "POST /api/ipo/ HTTP/1.1" 400 149
+INFO 2025-06-24 15:03:48,327 root | Called POST API list
+NoneType: None
+WARNING 2025-06-24 15:03:48,332 django.request | Bad Request: /api/ipo/
+WARNING 2025-06-24 15:03:48,332 django.server | "POST /api/ipo/ HTTP/1.1" 400 149
+INFO 2025-06-24 15:04:44,808 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-24 15:04:44,812 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+WARNING 2025-06-24 15:04:44,823 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:04:44,823 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:04:44,835 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:04:44,836 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+INFO 2025-06-24 15:08:35,591 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\urls.py changed, reloading.
+INFO 2025-06-24 15:08:36,955 django.utils.autoreload | Watching for file changes with StatReloader
+WARNING 2025-06-24 15:11:00,823 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-24 15:11:00,824 django.server | "GET /api/ipo/?page=1 HTTP/1.1" 401 5162
+INFO 2025-06-24 15:11:01,201 django.server | "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-06-24 15:11:01,201 django.server | "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-06-24 15:11:01,201 django.server | "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-06-24 15:11:01,206 django.server | "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-06-24 15:11:01,251 django.server | "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-06-24 15:11:01,251 django.server | "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-06-24 15:11:01,257 django.server | "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-06-24 15:11:01,267 django.server | "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-06-24 15:11:01,275 django.server | "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-06-24 15:11:01,285 django.server | "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-06-24 15:11:01,291 django.server | "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-06-24 15:11:01,316 django.server | "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2025-06-24 15:11:01,389 django.request | Not Found: /favicon.ico
+WARNING 2025-06-24 15:11:01,389 django.server | "GET /favicon.ico HTTP/1.1" 404 2685
+WARNING 2025-06-24 15:11:26,676 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:11:26,677 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:11:26,688 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:11:26,688 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:12:48,452 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:12:48,452 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:12:48,462 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:12:48,462 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:24:00,880 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:24:00,880 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+WARNING 2025-06-24 15:24:00,897 django.request | Not Found: /api/ipo/paginated/
+WARNING 2025-06-24 15:24:00,897 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 404 10241
+INFO 2025-06-24 15:25:45,007 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\urls.py changed, reloading.
+INFO 2025-06-24 15:25:46,401 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-24 15:25:59,735 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_api\urls.py changed, reloading.
+INFO 2025-06-24 15:26:00,982 django.utils.autoreload | Watching for file changes with StatReloader
+WARNING 2025-06-24 15:26:09,084 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 15:26:09,092 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-24 15:26:09,092 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 15:26:09,092 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 15:27:51,053 django.server | "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-06-24 15:27:52,183 django.server | "POST /api/login/ HTTP/1.1" 200 559
+INFO 2025-06-24 15:27:52,304 root | Called GET API list
+INFO 2025-06-24 15:27:52,361 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:27:52,437 root | Called GET API list
+INFO 2025-06-24 15:27:52,459 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:28:02,695 root | Called GET API list
+INFO 2025-06-24 15:28:02,727 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:28:02,798 root | Called GET API list
+INFO 2025-06-24 15:28:02,812 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:28:14,988 root | Called GET API list
+INFO 2025-06-24 15:28:15,007 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:28:15,081 root | Called GET API list
+INFO 2025-06-24 15:28:15,102 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:31:55,324 django.server | "OPTIONS /api/ipo/ HTTP/1.1" 200 0
+INFO 2025-06-24 15:31:55,393 root | Called POST API list
+NoneType: None
+WARNING 2025-06-24 15:31:55,461 django.request | Bad Request: /api/ipo/
+WARNING 2025-06-24 15:31:55,461 django.server | "POST /api/ipo/ HTTP/1.1" 400 59
+INFO 2025-06-24 15:34:49,162 root | Called GET API list
+INFO 2025-06-24 15:34:49,186 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:34:49,258 root | Called GET API list
+INFO 2025-06-24 15:34:49,271 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 769
+INFO 2025-06-24 15:36:44,927 root | Called POST API list
+NoneType: None
+INFO 2025-06-24 15:36:44,952 django.server | "POST /api/ipo/ HTTP/1.1" 201 475
+INFO 2025-06-24 15:36:45,029 root | Called GET API list
+INFO 2025-06-24 15:36:45,056 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1245
+INFO 2025-06-24 15:37:34,225 django.server | "OPTIONS /api/ipo/10/ HTTP/1.1" 200 0
+INFO 2025-06-24 15:37:34,317 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-24 15:37:34,338 django.server | "PUT /api/ipo/10/ HTTP/1.1" 200 390
+INFO 2025-06-24 15:37:34,530 root | Called GET API list
+INFO 2025-06-24 15:37:34,546 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1245
+INFO 2025-06-24 15:37:48,250 root | Called DELETE API for id
+NoneType: None
+INFO 2025-06-24 15:37:48,266 django.server | "DELETE /api/ipo/10/ HTTP/1.1" 204 0
+INFO 2025-06-24 15:37:48,341 root | Called GET API list
+INFO 2025-06-24 15:37:48,358 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 855
+INFO 2025-06-24 15:39:00,342 root | Called POST API list
+NoneType: None
+INFO 2025-06-24 15:39:00,374 django.server | "POST /api/ipo/ HTTP/1.1" 201 475
+INFO 2025-06-24 15:39:00,554 root | Called GET API list
+INFO 2025-06-24 15:39:00,571 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:39:08,339 django.server | "OPTIONS /api/ipo/paginated/?page=2 HTTP/1.1" 200 0
+INFO 2025-06-24 15:39:08,445 root | Called GET API list
+INFO 2025-06-24 15:39:08,454 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 565
+INFO 2025-06-24 15:39:10,768 root | Called GET API list
+INFO 2025-06-24 15:39:10,785 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:40:33,196 root | Called POST API list
+NoneType: None
+INFO 2025-06-24 15:40:33,223 django.server | "POST /api/ipo/ HTTP/1.1" 201 475
+INFO 2025-06-24 15:40:33,306 root | Called GET API list
+INFO 2025-06-24 15:40:33,322 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:40:36,877 root | Called GET API list
+INFO 2025-06-24 15:40:36,888 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 15:41:50,187 root | Called GET API list
+INFO 2025-06-24 15:41:50,205 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:41:51,724 root | Called GET API list
+INFO 2025-06-24 15:41:51,748 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 15:41:58,132 root | Called GET API list
+INFO 2025-06-24 15:41:58,156 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:42:16,487 root | Called GET API list
+INFO 2025-06-24 15:42:16,503 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 15:43:54,827 root | Called GET API list
+INFO 2025-06-24 15:43:54,841 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 15:44:10,809 root | Called GET API list
+INFO 2025-06-24 15:44:10,825 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 15:44:48,538 root | Called GET API list
+INFO 2025-06-24 15:44:48,563 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+WARNING 2025-06-24 16:01:53,301 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:01:53,301 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-24 16:01:53,301 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:01:53,301 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:01:53,364 root | Called GET API list
+INFO 2025-06-24 16:01:53,380 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:01:53,467 root | Called GET API list
+INFO 2025-06-24 16:01:53,483 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+WARNING 2025-06-24 16:01:54,286 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:01:54,286 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:01:54,386 root | Called GET API list
+INFO 2025-06-24 16:01:54,413 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:00,387 root | Called GET API list
+INFO 2025-06-24 16:02:00,408 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:00,515 root | Called GET API list
+INFO 2025-06-24 16:02:00,534 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:04,314 root | Called GET API list
+INFO 2025-06-24 16:02:04,338 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 16:02:13,784 root | Called GET API list
+INFO 2025-06-24 16:02:13,814 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:13,888 root | Called GET API list
+INFO 2025-06-24 16:02:13,909 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:27,508 django.server | "OPTIONS /api/ipo/9/ HTTP/1.1" 200 0
+INFO 2025-06-24 16:02:27,636 root | Called PUT API for id
+NoneType: None
+INFO 2025-06-24 16:02:27,660 django.server | "PUT /api/ipo/9/ HTTP/1.1" 200 387
+INFO 2025-06-24 16:02:27,845 root | Called GET API list
+INFO 2025-06-24 16:02:27,864 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+WARNING 2025-06-24 16:02:51,300 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:02:51,300 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-24 16:02:51,318 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:02:51,318 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:02:51,365 root | Called GET API list
+INFO 2025-06-24 16:02:51,380 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:02:51,458 root | Called GET API list
+INFO 2025-06-24 16:02:51,474 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+WARNING 2025-06-24 16:06:05,296 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:06:05,296 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:06:05,372 root | Called GET API list
+INFO 2025-06-24 16:06:05,398 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:06:11,098 root | Called GET API list
+INFO 2025-06-24 16:06:11,123 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:06:11,192 root | Called GET API list
+INFO 2025-06-24 16:06:11,209 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:06:22,782 root | Called GET API list
+INFO 2025-06-24 16:06:22,800 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 16:06:24,914 root | Called GET API list
+INFO 2025-06-24 16:06:24,931 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1041
+INFO 2025-06-24 16:06:26,277 root | Called GET API list
+INFO 2025-06-24 16:06:26,298 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:07:33,538 root | Called POST API list
+NoneType: None
+INFO 2025-06-24 16:07:33,563 django.server | "POST /api/ipo/ HTTP/1.1" 201 475
+INFO 2025-06-24 16:07:33,638 root | Called GET API list
+INFO 2025-06-24 16:07:33,654 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:07:37,433 root | Called GET API list
+INFO 2025-06-24 16:07:37,451 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1517
+INFO 2025-06-24 16:07:40,257 root | Called GET API list
+INFO 2025-06-24 16:07:40,273 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:07:42,648 root | Called GET API list
+INFO 2025-06-24 16:07:42,673 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1517
+WARNING 2025-06-24 16:08:02,290 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:08:02,291 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:08:02,357 root | Called GET API list
+INFO 2025-06-24 16:08:02,374 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:08:06,343 root | Called GET API list
+INFO 2025-06-24 16:08:06,359 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:08:06,541 root | Called GET API list
+INFO 2025-06-24 16:08:06,557 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:08:09,224 root | Called GET API list
+INFO 2025-06-24 16:08:09,251 django.server | "GET /api/ipo/paginated/?page=2 HTTP/1.1" 200 1517
+WARNING 2025-06-24 16:08:31,288 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-24 16:08:31,288 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-24 16:08:31,350 root | Called GET API list
+INFO 2025-06-24 16:08:31,382 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:15:54,166 root | Called GET API list
+INFO 2025-06-24 16:15:54,183 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:15:54,256 root | Called GET API list
+INFO 2025-06-24 16:15:54,281 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 900
+INFO 2025-06-24 16:18:33,160 django.utils.autoreload | D:\New_Repo\bluestock_restful_api\backend\ipo_project\ipo_project\settings.py changed, reloading.
+INFO 2025-06-24 16:18:34,609 django.utils.autoreload | Watching for file changes with StatReloader

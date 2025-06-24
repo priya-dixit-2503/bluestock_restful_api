@@ -28,6 +28,9 @@ urlpatterns = [
     path('ipo/', views.ipo_list),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
+    path('ipo/paginated/', views.ipo_list, name='ipo-paginated'),
+
+
 
     
 ]
