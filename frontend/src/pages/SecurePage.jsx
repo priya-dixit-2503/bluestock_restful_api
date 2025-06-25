@@ -126,7 +126,9 @@ function SecurePage() {
       </button>
 
       {showForm && (
-        <form onSubmit={handleCreate} className="space-y-2 mb-6 border p-4 rounded shadow">
+        <form 
+        onSubmit={handleCreate} 
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 border p-4 rounded shadow">
           <input
             type="text"
             placeholder="Company Name"
@@ -192,7 +194,7 @@ function SecurePage() {
           })}
           <button
             type="submit"
-            className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center"
+            className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center w-full sm:w-auto"
             disabled={loadingCreate}
           >
             {loadingCreate ? (
@@ -210,6 +212,7 @@ function SecurePage() {
         </div>
       ) : (
         <>
+        <div className="overflow-x-auto">
           <table className="table-auto w-full border-collapse border border-gray-400">
             <thead>
               <tr className="bg-gray-100">
@@ -263,7 +266,7 @@ function SecurePage() {
                     </td>
                     <td className="border p-2">
                       <button
-                        className="bg-yellow-500 text-white px-2 py-1 mr-2"
+                        className="bg-yellow-500 text-white px-2 py-1 mr-2 w-full sm:w-auto"
                         onClick={() => {
                           setEditData(data);
                           setEditingId(data.id);
@@ -272,7 +275,7 @@ function SecurePage() {
                         Edit
                       </button>
                       <button
-                        className="bg-red-600 text-white px-2 py-1 flex items-center"
+                        className="bg-red-600 text-white px-2 py-1 flex items-center w-full sm:w-auto"
                         onClick={() => handleDelete(data.id)}
                         disabled={loadingDeleteId === data.id}
                       >
@@ -287,12 +290,11 @@ function SecurePage() {
                 );
               })}
             </tbody>
-
-
           </table>
-
+        </div>
+        
           {totalPages > 1 && (
-            <div className="flex justify-center mt-4 space-x-2">
+            <div className="flex flex-wrap justify-center mt-4 gap-2">
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
                   key={i + 1}
@@ -308,7 +310,7 @@ function SecurePage() {
       )}
 
       {editingId && editData && (
-        <div className="mt-6 border p-4 rounded shadow bg-yellow-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 border p-4 rounded shadow bg-yellow-50">
           <h3 className="text-xl font-semibold mb-2">Edit IPO</h3>
           
           <input
@@ -416,7 +418,7 @@ function SecurePage() {
           <div className="flex gap-4 mt-4">
             <button
               onClick={() => handleUpdate(editingId)}
-              className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center"
+              className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center w-full sm:w-auto"
               disabled={loadingUpdate}
             >
               {loadingUpdate ? (
@@ -430,7 +432,7 @@ function SecurePage() {
                 setEditingId(null);
                 setEditData(null);
               }}
-              className="bg-gray-500 text-white px-4 py-2 rounded"
+              className="bg-gray-500 text-white px-4 py-2 rounded w-full sm:w-auto"
             >
               Cancel
             </button>
