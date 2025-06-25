@@ -14,6 +14,7 @@ const Navbar = () => {
   // ✅ Logout clears token and updates UI
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setIsLoggedIn(false);        // Update navbar UI immediately
     navigate("/login");          // Redirect to login
   };

@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SecurePage from './pages/SecurePage';
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -19,7 +20,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/secure" element={loggedIn ? <SecurePage /> : <Login onLogin={() => setLoggedIn(true)} />} />
+            <Route
+              path="/secure"
+              element={
+                <PrivateRoute>
+                  <SecurePage />
+                </PrivateRoute>
+              }
+            />
           </Routes>
         </main>
         <Footer />
