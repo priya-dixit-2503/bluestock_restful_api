@@ -310,6 +310,7 @@ function SecurePage() {
       {editingId && editData && (
         <div className="mt-6 border p-4 rounded shadow bg-yellow-50">
           <h3 className="text-xl font-semibold mb-2">Edit IPO</h3>
+          
           <input
             type="text"
             className="border p-2 w-full mb-2"
@@ -334,9 +335,47 @@ function SecurePage() {
           <input
             type="text"
             className="border p-2 w-full mb-2"
+            value={editData.issue_size}
+            onChange={e => setEditData({ ...editData, issue_size: e.target.value })}
+            placeholder="Issue Size"
+          />
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
+            value={editData.issue_type}
+            onChange={e => setEditData({ ...editData, issue_type: e.target.value })}
+            placeholder="Issue Type"
+          />
+          <input
+            type="date"
+            className="border p-2 w-full mb-2"
+            value={editData.listing_date}
+            onChange={e => setEditData({ ...editData, listing_date: e.target.value })}
+            placeholder="Listing Date"
+          />
+          <select
+            className="border p-2 w-full mb-2"
+            value={editData.status}
+            onChange={e => setEditData({ ...editData, status: e.target.value })}
+          >
+            <option value="">Select Status</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="listed">Listed</option>
+          </select>
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
             value={editData.ipo_price}
             onChange={e => setEditData({ ...editData, ipo_price: e.target.value })}
             placeholder="IPO Price"
+          />
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
+            value={editData.listing_price}
+            onChange={e => setEditData({ ...editData, listing_price: e.target.value })}
+            placeholder="Listing Price"
           />
           <input
             type="text"
@@ -345,28 +384,60 @@ function SecurePage() {
             onChange={e => setEditData({ ...editData, current_market_price: e.target.value })}
             placeholder="Current Market Price"
           />
-          <button
-            onClick={() => handleUpdate(editingId)}
-            className="bg-green-600 text-white px-4 py-2 mr-2 rounded flex items-center justify-center"
-            disabled={loadingUpdate}
-          >
-            {loadingUpdate ? (
-              <Circles height={20} width={20} color="#fff" />
-            ) : (
-              "Save"
-            )}
-          </button>
-          <button
-            onClick={() => {
-              setEditingId(null);
-              setEditData(null);
+
+          {/* RHP & DRHP PDF URLs (if documents exist) */}
+          <input
+            type="url"
+            className="border p-2 w-full mb-2"
+            value={editData.documents?.[0]?.rhp_pdf || ''}
+            onChange={e => {
+              const updated = { ...editData };
+              if (!updated.documents) updated.documents = [{}];
+              if (!updated.documents[0]) updated.documents[0] = {};
+              updated.documents[0].rhp_pdf = e.target.value;
+              setEditData(updated);
             }}
-            className="bg-gray-500 text-white px-4 py-2 rounded"
-          >
-            Cancel
-          </button>
+            placeholder="RHP PDF URL"
+          />
+          <input
+            type="url"
+            className="border p-2 w-full mb-2"
+            value={editData.documents?.[0]?.drhp_pdf || ''}
+            onChange={e => {
+              const updated = { ...editData };
+              if (!updated.documents) updated.documents = [{}];
+              if (!updated.documents[0]) updated.documents[0] = {};
+              updated.documents[0].drhp_pdf = e.target.value;
+              setEditData(updated);
+            }}
+            placeholder="DRHP PDF URL"
+          />
+
+          <div className="flex gap-4 mt-4">
+            <button
+              onClick={() => handleUpdate(editingId)}
+              className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center"
+              disabled={loadingUpdate}
+            >
+              {loadingUpdate ? (
+                <Circles height={20} width={20} color="#fff" />
+              ) : (
+                "Save"
+              )}
+            </button>
+            <button
+              onClick={() => {
+                setEditingId(null);
+                setEditData(null);
+              }}
+              className="bg-gray-500 text-white px-4 py-2 rounded"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       )}
+
     </div>
   );
 }
