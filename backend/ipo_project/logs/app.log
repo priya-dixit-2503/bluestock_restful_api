@@ -758,3 +758,89 @@ INFO 2025-06-25 12:41:53,848 root | Called GET API list
 INFO 2025-06-25 12:41:53,866 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1298
 INFO 2025-06-25 12:41:53,951 root | Called GET API list
 INFO 2025-06-25 12:41:53,964 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1298
+INFO 2025-06-25 15:18:06,564 django.utils.autoreload | Watching for file changes with StatReloader
+INFO 2025-06-25 15:20:10,832 django.server | "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-06-25 15:20:12,391 django.server | "POST /api/login/ HTTP/1.1" 200 564
+INFO 2025-06-25 15:20:12,440 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-25 15:20:12,450 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+INFO 2025-06-25 15:20:12,538 root | Called GET API list
+INFO 2025-06-25 15:20:12,578 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1298
+INFO 2025-06-25 15:20:12,669 root | Called GET API list
+INFO 2025-06-25 15:20:12,682 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1298
+INFO 2025-06-25 15:20:20,517 django.server | "OPTIONS /api/ipo/2/ HTTP/1.1" 200 0
+INFO 2025-06-25 15:20:20,599 root | Called DELETE API for id
+NoneType: None
+INFO 2025-06-25 15:20:20,611 django.server | "DELETE /api/ipo/2/ HTTP/1.1" 204 0
+INFO 2025-06-25 15:20:20,694 root | Called GET API list
+INFO 2025-06-25 15:20:20,708 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 859
+INFO 2025-06-25 15:20:23,314 django.server | "OPTIONS /api/ipo/3/ HTTP/1.1" 200 0
+INFO 2025-06-25 15:20:23,398 root | Called DELETE API for id
+NoneType: None
+INFO 2025-06-25 15:20:23,406 django.server | "DELETE /api/ipo/3/ HTTP/1.1" 204 0
+INFO 2025-06-25 15:20:23,488 root | Called GET API list
+INFO 2025-06-25 15:20:23,497 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 420
+WARNING 2025-06-25 16:37:06,184 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 16:37:06,188 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 16:37:06,192 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 16:37:06,193 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 16:45:49,150 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 16:45:49,151 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:00:46,133 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:00:46,133 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:01:40,963 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:01:40,964 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:01:40,970 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:01:40,971 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:02:00,639 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:02:00,640 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:02:00,646 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:02:00,646 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:02:15,885 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:02:15,886 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:02:15,890 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:02:15,890 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:02:38,710 django.request | Unauthorized: /api/ipo/
+WARNING 2025-06-25 17:02:38,711 django.server | "POST /api/ipo/ HTTP/1.1" 401 172
+INFO 2025-06-25 17:02:50,933 django.server | "POST /api/login/ HTTP/1.1" 200 8165
+INFO 2025-06-25 17:03:10,225 django.server | "POST /api/login/ HTTP/1.1" 200 8165
+INFO 2025-06-25 17:03:19,209 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+WARNING 2025-06-25 17:03:19,212 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:03:19,213 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-25 17:03:19,215 django.server | "OPTIONS /api/ipo/paginated/?page=1 HTTP/1.1" 200 0
+WARNING 2025-06-25 17:03:19,220 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:03:19,220 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-25 17:03:48,113 root | Called POST API list
+NoneType: None
+INFO 2025-06-25 17:03:48,222 django.server | "POST /api/ipo/ HTTP/1.1" 201 561
+WARNING 2025-06-25 17:03:55,528 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:03:55,529 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:03:55,532 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:03:55,533 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:04:03,524 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:04:03,525 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:04:03,530 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:04:03,530 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-25 17:05:01,200 root | Called POST API list
+NoneType: None
+INFO 2025-06-25 17:05:01,221 django.server | "POST /api/ipo/ HTTP/1.1" 201 560
+WARNING 2025-06-25 17:05:09,215 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:05:09,216 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+WARNING 2025-06-25 17:05:09,222 django.request | Unauthorized: /api/ipo/paginated/
+WARNING 2025-06-25 17:05:09,223 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 401 172
+INFO 2025-06-25 17:05:25,047 django.server | "POST /api/login/ HTTP/1.1" 200 564
+INFO 2025-06-25 17:05:25,185 root | Called GET API list
+INFO 2025-06-25 17:05:25,205 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1543
+INFO 2025-06-25 17:05:25,291 root | Called GET API list
+INFO 2025-06-25 17:05:25,308 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1543
+INFO 2025-06-25 17:05:31,400 django.server | "OPTIONS /api/ipo/4/ HTTP/1.1" 200 0
+INFO 2025-06-25 17:05:31,486 root | Called DELETE API for id
+NoneType: None
+INFO 2025-06-25 17:05:31,495 django.server | "DELETE /api/ipo/4/ HTTP/1.1" 204 0
+INFO 2025-06-25 17:05:31,573 root | Called GET API list
+INFO 2025-06-25 17:05:31,589 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 1104
+INFO 2025-06-25 17:07:49,790 django.server | "OPTIONS /api/ipo/5/ HTTP/1.1" 200 0
+INFO 2025-06-25 17:07:49,877 root | Called DELETE API for id
+NoneType: None
+INFO 2025-06-25 17:07:49,885 django.server | "DELETE /api/ipo/5/ HTTP/1.1" 204 0
+INFO 2025-06-25 17:07:49,968 root | Called GET API list
+INFO 2025-06-25 17:07:49,979 django.server | "GET /api/ipo/paginated/?page=1 HTTP/1.1" 200 665

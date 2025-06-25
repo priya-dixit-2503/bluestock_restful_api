@@ -12,6 +12,10 @@ function SecurePage() {
   const [loadingUpdate, setLoadingUpdate] = useState(false);
   const [loadingDeleteId, setLoadingDeleteId] = useState(null);
 
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -39,6 +43,15 @@ function SecurePage() {
 
   const token = localStorage.getItem('access_token');
 
+  const showMessage = (msg, type = 'success') => {
+    setMessage(msg);
+    setMessageType(type);
+    setTimeout(() => {
+      setMessage(null);
+      setMessageType('');
+    }, 4000); // Message auto-dismiss
+  };
+
   const fetchIPOs = useCallback((page = 1) => {
     setLoadingFetch(true);
     axios.get(`http://127.0.0.1:8000/api/ipo/paginated/?page=${page}`, {
@@ -59,8 +72,13 @@ function SecurePage() {
     setLoadingDeleteId(id);
     axios.delete(`http://127.0.0.1:8000/api/ipo/${id}/`, {
       headers: { Authorization: `Bearer ${token}` }
-    }).then(() => fetchIPOs(currentPage))
-      .finally(() => setLoadingDeleteId(null));
+    }).then(() => {
+      showMessage("IPO deleted successfully!", "success");
+      fetchIPOs(currentPage);
+    }).catch((err) => {
+      console.error("Delete error:", err);
+      showMessage("Failed to delete IPO", "error");
+    }).finally(() => setLoadingDeleteId(null));
   };
 
   const handleUpdate = (id) => {
@@ -71,11 +89,13 @@ function SecurePage() {
         'Content-Type': 'application/json',
       },
     }).then(() => {
+      showMessage("IPO updated successfully!", "success");
       setEditingId(null);
       setEditData(null);
       fetchIPOs(currentPage);
     }).catch((err) => {
       console.error("Update error:", err);
+      showMessage("Failed to update IPO", "error");
     }).finally(() => setLoadingUpdate(false));
   };
 
@@ -88,6 +108,7 @@ function SecurePage() {
         'Content-Type': 'application/json',
       }
     }).then(() => {
+      showMessage("IPO registered successfully!", "success");
       setShowForm(false);
       setNewCompany({
         company_name: '',
@@ -111,12 +132,25 @@ function SecurePage() {
         ]
       });
       fetchIPOs(currentPage);
+    }).catch((err) => {
+        console.error(err);
+        showMessage("Failed to register IPO", "error");
     }).finally(() => setLoadingCreate(false));
   };
 
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">IPO Dashboard</h2>
+
+      {message && (
+        <div
+          className={`mb-4 px-4 py-2 rounded text-white ${
+            messageType === 'success' ? 'bg-green-600' : 'bg-red-600'
+          }`}
+        >
+          {message}
+        </div>
+      )}
 
       <button
         onClick={() => setShowForm(!showForm)}
