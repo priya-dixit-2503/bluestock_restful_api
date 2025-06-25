@@ -126,7 +126,9 @@ function SecurePage() {
       </button>
 
       {showForm && (
-        <form onSubmit={handleCreate} className="space-y-2 mb-6 border p-4 rounded shadow">
+        <form 
+        onSubmit={handleCreate} 
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 border p-4 rounded shadow">
           <input
             type="text"
             placeholder="Company Name"
@@ -192,7 +194,7 @@ function SecurePage() {
           })}
           <button
             type="submit"
-            className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center"
+            className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center w-full sm:w-auto"
             disabled={loadingCreate}
           >
             {loadingCreate ? (
@@ -210,6 +212,7 @@ function SecurePage() {
         </div>
       ) : (
         <>
+        <div className="overflow-x-auto">
           <table className="table-auto w-full border-collapse border border-gray-400">
             <thead>
               <tr className="bg-gray-100">
@@ -218,50 +221,80 @@ function SecurePage() {
                 <th className="border p-2">Price Band</th>
                 <th className="border p-2">Open</th>
                 <th className="border p-2">Close</th>
+                <th className="border p-2">Issue Size</th>
+                <th className="border p-2">Issue Type</th>
+                <th className="border p-2">Listing Date</th>
+                <th className="border p-2">Status</th>
                 <th className="border p-2">IPO Price</th>
+                <th className="border p-2">Listing Price</th>
+                <th className="border p-2">Listing Gain</th>
                 <th className="border p-2">Current Price</th>
+                <th className="border p-2">Current Return</th>
+                <th className="border p-2">RHP</th>
+                <th className="border p-2">DRHP</th>
                 <th className="border p-2">Actions</th>
               </tr>
             </thead>
             <tbody>
-              {ipos.map(ipo => (
-                <tr key={ipo.id}>
-                  <td className="border p-2">{ipo.id}</td>
-                  <td className="border p-2">{ipo.company_name}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.price_band}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.open_date}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.close_date}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.ipo_price}</td>
-                  <td className="border p-2">{ipo.ipos[0]?.current_market_price}</td>
-                  <td className="border p-2">
-                    <button
-                      className="bg-yellow-500 text-white px-2 py-1 mr-2"
-                      onClick={() => {
-                        setEditData(ipo.ipos[0]);
-                        setEditingId(ipo.ipos[0]?.id);
-                      }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="bg-red-600 text-white px-2 py-1 flex items-center"
-                      onClick={() => handleDelete(ipo.ipos[0]?.id)}
-                      disabled={loadingDeleteId === ipo.ipos[0]?.id}
-                    >
-                      {loadingDeleteId === ipo.ipos[0]?.id ? (
-                        <Circles height={20} width={20} color="#fff" />
-                      ) : (
-                        "Delete"
+              {ipos.map(ipo => {
+                const data = ipo.ipos[0]; // shorthand for easier reading
+                return (
+                  <tr key={ipo.id}>
+                    <td className="border p-2">{ipo.id}</td>
+                    <td className="border p-2">{ipo.company_name}</td>
+                    <td className="border p-2">{data.price_band}</td>
+                    <td className="border p-2">{data.open_date}</td>
+                    <td className="border p-2">{data.close_date}</td>
+                    <td className="border p-2">{data.issue_size}</td>
+                    <td className="border p-2">{data.issue_type}</td>
+                    <td className="border p-2">{data.listing_date}</td>
+                    <td className="border p-2">{data.status}</td>
+                    <td className="border p-2">{data.ipo_price}</td>
+                    <td className="border p-2">{data.listing_price}</td>
+                    <td className="border p-2">{data.listing_gain}%</td>
+                    <td className="border p-2">{data.current_market_price}</td>
+                    <td className="border p-2">{data.current_return}%</td>
+                    <td className="border p-2">
+                      {data.documents?.[0]?.rhp_pdf && (
+                        <a href={data.documents[0].rhp_pdf} className="text-blue-500 underline" target="_blank">View</a>
                       )}
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className="border p-2">
+                      {data.documents?.[0]?.drhp_pdf && (
+                        <a href={data.documents[0].drhp_pdf} className="text-blue-500 underline" target="_blank">View</a>
+                      )}
+                    </td>
+                    <td className="border p-2">
+                      <button
+                        className="bg-yellow-500 text-white px-2 py-1 mr-2 w-full sm:w-auto"
+                        onClick={() => {
+                          setEditData(data);
+                          setEditingId(data.id);
+                        }}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="bg-red-600 text-white px-2 py-1 flex items-center w-full sm:w-auto"
+                        onClick={() => handleDelete(data.id)}
+                        disabled={loadingDeleteId === data.id}
+                      >
+                        {loadingDeleteId === data.id ? (
+                          <Circles height={20} width={20} color="#fff" />
+                        ) : (
+                          "Delete"
+                        )}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
-
+        </div>
+        
           {totalPages > 1 && (
-            <div className="flex justify-center mt-4 space-x-2">
+            <div className="flex flex-wrap justify-center mt-4 gap-2">
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
                   key={i + 1}
@@ -277,8 +310,9 @@ function SecurePage() {
       )}
 
       {editingId && editData && (
-        <div className="mt-6 border p-4 rounded shadow bg-yellow-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 border p-4 rounded shadow bg-yellow-50">
           <h3 className="text-xl font-semibold mb-2">Edit IPO</h3>
+          
           <input
             type="text"
             className="border p-2 w-full mb-2"
@@ -303,9 +337,47 @@ function SecurePage() {
           <input
             type="text"
             className="border p-2 w-full mb-2"
+            value={editData.issue_size}
+            onChange={e => setEditData({ ...editData, issue_size: e.target.value })}
+            placeholder="Issue Size"
+          />
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
+            value={editData.issue_type}
+            onChange={e => setEditData({ ...editData, issue_type: e.target.value })}
+            placeholder="Issue Type"
+          />
+          <input
+            type="date"
+            className="border p-2 w-full mb-2"
+            value={editData.listing_date}
+            onChange={e => setEditData({ ...editData, listing_date: e.target.value })}
+            placeholder="Listing Date"
+          />
+          <select
+            className="border p-2 w-full mb-2"
+            value={editData.status}
+            onChange={e => setEditData({ ...editData, status: e.target.value })}
+          >
+            <option value="">Select Status</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="listed">Listed</option>
+          </select>
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
             value={editData.ipo_price}
             onChange={e => setEditData({ ...editData, ipo_price: e.target.value })}
             placeholder="IPO Price"
+          />
+          <input
+            type="text"
+            className="border p-2 w-full mb-2"
+            value={editData.listing_price}
+            onChange={e => setEditData({ ...editData, listing_price: e.target.value })}
+            placeholder="Listing Price"
           />
           <input
             type="text"
@@ -314,28 +386,60 @@ function SecurePage() {
             onChange={e => setEditData({ ...editData, current_market_price: e.target.value })}
             placeholder="Current Market Price"
           />
-          <button
-            onClick={() => handleUpdate(editingId)}
-            className="bg-green-600 text-white px-4 py-2 mr-2 rounded flex items-center justify-center"
-            disabled={loadingUpdate}
-          >
-            {loadingUpdate ? (
-              <Circles height={20} width={20} color="#fff" />
-            ) : (
-              "Save"
-            )}
-          </button>
-          <button
-            onClick={() => {
-              setEditingId(null);
-              setEditData(null);
+
+          {/* RHP & DRHP PDF URLs (if documents exist) */}
+          <input
+            type="url"
+            className="border p-2 w-full mb-2"
+            value={editData.documents?.[0]?.rhp_pdf || ''}
+            onChange={e => {
+              const updated = { ...editData };
+              if (!updated.documents) updated.documents = [{}];
+              if (!updated.documents[0]) updated.documents[0] = {};
+              updated.documents[0].rhp_pdf = e.target.value;
+              setEditData(updated);
             }}
-            className="bg-gray-500 text-white px-4 py-2 rounded"
-          >
-            Cancel
-          </button>
+            placeholder="RHP PDF URL"
+          />
+          <input
+            type="url"
+            className="border p-2 w-full mb-2"
+            value={editData.documents?.[0]?.drhp_pdf || ''}
+            onChange={e => {
+              const updated = { ...editData };
+              if (!updated.documents) updated.documents = [{}];
+              if (!updated.documents[0]) updated.documents[0] = {};
+              updated.documents[0].drhp_pdf = e.target.value;
+              setEditData(updated);
+            }}
+            placeholder="DRHP PDF URL"
+          />
+
+          <div className="flex gap-4 mt-4">
+            <button
+              onClick={() => handleUpdate(editingId)}
+              className="bg-green-600 text-white px-4 py-2 rounded flex items-center justify-center w-full sm:w-auto"
+              disabled={loadingUpdate}
+            >
+              {loadingUpdate ? (
+                <Circles height={20} width={20} color="#fff" />
+              ) : (
+                "Save"
+              )}
+            </button>
+            <button
+              onClick={() => {
+                setEditingId(null);
+                setEditData(null);
+              }}
+              className="bg-gray-500 text-white px-4 py-2 rounded w-full sm:w-auto"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       )}
+
     </div>
   );
 }
