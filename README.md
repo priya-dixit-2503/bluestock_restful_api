@@ -75,7 +75,7 @@ Frontend-
      URL: http://127.0.0.1:8000/api/ipo/
      Description: Retrieve a list of all IPOs.
      Authentication: Required (JWT)
-     ![Get](<Screenshot 2025-06-26 161932.png>)
+     ![Get](api_screenshots/GET_IPO_LIST.png)
 
 2. Create New IPO
 
@@ -84,9 +84,7 @@ Frontend-
     Description: Create a new IPO entry.
     Authentication: Required
     Request Body (JSON): 
-    ![Post](<Screenshot 2025-06-26 162149.png>)
-
-    Like this-
+    ![Post](api_screenshots/POST_IPO_LIST.png)
 
     {
   "id": 1,
@@ -124,7 +122,7 @@ Frontend-
     URL: http://127.0.0.1:8000/api/ipo/{id}
     Description: Get details of a specific IPO by its ID.
     Authentication: Required
-    ![Get eith id](<Screenshot 2025-06-26 175659.png>)
+    ![Get with id](api_screenshots/GET_API.png)
 
 
 4. Update IPO by ID
@@ -133,7 +131,7 @@ Frontend-
     URL: http://127.0.0.1:8000/api/ipo/{id}
     Description: Update an existing IPO's details.
     Authentication: Required
-    ![put](<Screenshot 2025-06-26 175016.png>)
+    ![put](api_screenshots/PUT_API.png)
     Request Body (JSON):
 
    - After update-
@@ -175,20 +173,20 @@ Frontend-
     URL: http://127.0.0.1:8000/api/ipo/{id}
     Description: Delete an existing IPO's details.
     Authentication: Required
-    ![alt text](<Screenshot 2025-06-26 175054.png>)
+    ![Delete](api_screenshots/DELETE_API.png)
 
 
 http://127.0.0.1:8000/api/companies/
-![companies](<WhatsApp Image 2025-06-26 at 13.28.16.jpeg>)
+![companies](api_screenshots/GET_COMP.png)
 
 http://127.0.0.1:8000/api/signup/
-![signup](<WhatsApp Image 2025-06-26 at 13.27.42.jpeg>)
+![signup](api_screenshots/SIGN_UP.png)
 
 http://127.0.0.1:8000/api/login/
-![login](<WhatsApp Image 2025-06-26 at 13.27.59.jpeg>)
+![login](api_screenshots/LOGIN.png)
 
 http://127.0.0.1:8000/api/token/refresh/
-![token refresh](<WhatsApp Image 2025-06-26 at 13.28.35.jpeg>)
+![token refresh](api_screenshots/REFRESH_TOKEN.png)
 
 http://127.0.0.1:8000/api/logout/
-![logout](<WhatsApp Image 2025-06-26 at 13.28.53.jpeg>)
+![logout](api_screenshots/LOGOUT.png)
