@@ -177,16 +177,21 @@ Frontend-
 
 
 http://127.0.0.1:8000/api/companies/
+
 ![companies](api_screenshots/GET_COMP.png)
 
 http://127.0.0.1:8000/api/signup/
+
 ![signup](api_screenshots/SIGN_UP.png)
 
 http://127.0.0.1:8000/api/login/
+
 ![login](api_screenshots/LOGIN.png)
 
 http://127.0.0.1:8000/api/token/refresh/
+
 ![token refresh](api_screenshots/REFRESH_TOKEN.png)
 
 http://127.0.0.1:8000/api/logout/
+
 ![logout](api_screenshots/LOGOUT.png)
