@@ -176,22 +176,72 @@ Frontend-
     ![Delete](api_screenshots/DELETE_API.png)
 
 
-http://127.0.0.1:8000/api/companies/
+6. Get All Companies
+     Method: Get
+     URL:http://127.0.0.1:8000/api/companies/
+     Description: Returns a list of all available companies.
+     Response:
+   [
+  {
+    "id": 1,
+    "company_name": "TCS",
+    "company_logo": "https://example.com/logo.png"
+  },
+  {
+    "id": 2,
+    "company_name": "Infosys",
+    "company_logo": "https://example.com/logo2.png"
+  }
+]
+   
+   ![companies](api_screenshots/GET_COMP.jpeg)
 
-![companies](api_screenshots/GET_COMP.jpeg)
-
-http://127.0.0.1:8000/api/signup/
+8. User Signup
+   Method: Post
+   URL: http://127.0.0.1:8000/api/signup/
+   Description: Log in an existing user and get JWT tokens.
+   Request Body:
+   {
+  "email": "user@example.com",
+  "password": "yourpassword",
+  "confirm_password": "yourpassword"
+}
 
 ![signup](api_screenshots/SIGN_UP.jpeg)
 
-http://127.0.0.1:8000/api/login/
+
+8. User Login
+   Method: Post
+   URL: http://127.0.0.1:8000/api/login/
+   Description: Log in an existing user and get JWT tokens.
+   Request Body:
+   {
+  "email": "user@example.com",
+  "password": "yourpassword"
+}
 
 ![login](api_screenshots/LOGIN.jpeg)
 
-http://127.0.0.1:8000/api/token/refresh/
+
+9. Token Refresh
+    Method: PUT
+   URL: http://127.0.0.1:8000/api/token/refresh/
+   Description: Get a new access token using the refresh token.
+   Request Body:
+   {
+  "refresh": "<your-refresh-token>"
+}
 
 ![token refresh](api_screenshots/REFRESH_TOKEN.jpeg)
 
-http://127.0.0.1:8000/api/logout/
+
+10. User Logout
+    Method: Post
+    URL: http://127.0.0.1:8000/api/logout/
+    Description: Logout the user and blacklist the refresh token.
+    Headers:
+    Authorization: Bearer <your-refresh-token>
+
+
 
 ![logout](api_screenshots/LOGOUT.jpeg)
