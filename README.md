@@ -178,20 +178,20 @@ Frontend-
 
 http://127.0.0.1:8000/api/companies/
 
-![companies](api_screenshots/GET_COMP.png)
+![companies](api_screenshots/GET_COMP.jpeg)
 
 http://127.0.0.1:8000/api/signup/
 
-![signup](api_screenshots/SIGN_UP.png)
+![signup](api_screenshots/SIGN_UP.jpeg)
 
 http://127.0.0.1:8000/api/login/
 
-![login](api_screenshots/LOGIN.png)
+![login](api_screenshots/LOGIN.jpeg)
 
 http://127.0.0.1:8000/api/token/refresh/
 
-![token refresh](api_screenshots/REFRESH_TOKEN.png)
+![token refresh](api_screenshots/REFRESH_TOKEN.jpeg)
 
 http://127.0.0.1:8000/api/logout/
 
-![logout](api_screenshots/LOGOUT.png)
+![logout](api_screenshots/LOGOUT.jpeg)
