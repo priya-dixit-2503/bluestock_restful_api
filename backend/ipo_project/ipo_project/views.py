@@ -12,6 +12,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework.pagination import PageNumberPagination
 
+
+
 from .serializers import (
     RegisterSerializer,
     CompanySerializer,
@@ -115,7 +117,8 @@ class IPOViewSet(viewsets.ModelViewSet):
         if status_param:
             queryset = queryset.filter(status=status_param)
         return queryset
-    
+
+
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
@@ -148,6 +151,7 @@ def ipo_detail(request, pk):
         logger.info(f"Called DELETE API for id", exc_info=True)
         queryset.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 @api_view(['GET', 'POST'])
 def ipo_list(request):

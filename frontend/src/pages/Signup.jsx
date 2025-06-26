@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Signup() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -19,15 +21,31 @@ export default function Signup() {
         throw new Error("Passwords do not match");
       }
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log("Signup data:", { email, password });
+      const response = await axios.post("http://127.0.0.1:8000/api/signup/", {
+        username: username,
+        email: email,
+        password: password,
+      });
 
-      // Show success message and navigate
+      console.log("Signup success:", response.data);
+
       alert("Signup successful! Please login.");
       navigate("/login");
     } catch (err) {
-      setError(err.message);
+      console.error("Signup error:", err);
+
+      if (axios.isAxiosError(err)) {
+        if (err.response?.data) {
+          const errorData = err.response.data;
+          const errorMessage =
+            errorData.error || Object.values(errorData).flat().join(", ");
+          setError(errorMessage);
+        } else {
+          setError("No response from server");
+        }
+      } else {
+        setError("Unexpected error occurred");
+      }
     } finally {
       setIsLoading(false);
     }
@@ -40,6 +58,15 @@ export default function Signup() {
         className="bg-white p-8 rounded shadow-md w-full max-w-sm"
       >
         <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
+
+        <input
+          type="text"
+          placeholder="Username"
+          className="w-full p-3 mb-4 border rounded"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
 
         <input
           type="email"
@@ -66,7 +93,9 @@ export default function Signup() {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
-        />        {error && (
+        />
+
+        {error && (
           <div className="mb-4 p-2 text-sm text-red-600 bg-red-50 rounded">
             {error}
           </div>
