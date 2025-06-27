@@ -96,7 +96,7 @@ export default function Signup() {
         />
 
         {error && (
-          <div className="mb-4 p-2 text-sm text-red-600 bg-red-50 rounded">
+          <div className="mb-4 p-2 text-sm text-red-600 bg-red-100 rounded">
             {error}
           </div>
         )}
