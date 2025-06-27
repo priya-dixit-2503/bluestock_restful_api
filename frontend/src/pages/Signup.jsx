@@ -52,12 +52,12 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded shadow-md w-full max-w-sm"
+        className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md"
       >
-        <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
+        <h2 className="text-3xl font-bold text-center text-green-600 mb-6">Sign Up</h2>
 
         <input
           type="text"
@@ -71,7 +71,7 @@ export default function Signup() {
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-3 mb-4 border rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -80,7 +80,7 @@ export default function Signup() {
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-3 mb-4 border rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -89,14 +89,14 @@ export default function Signup() {
         <input
           type="password"
           placeholder="Confirm Password"
-          className="w-full p-3 mb-4 border rounded"
+          className="w-full p-3 mb-6 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
 
         {error && (
-          <div className="mb-4 p-2 text-sm text-red-600 bg-red-50 rounded">
+          <div className="mb-4 p-2 text-sm text-red-600 bg-red-100 rounded">
             {error}
           </div>
         )}
@@ -104,7 +104,7 @@ export default function Signup() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full p-3 rounded text-white ${
+          className={`w-full py-3 rounded text-white font-semibold transition ${
             isLoading
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-green-600 hover:bg-green-700"
