@@ -115,7 +115,8 @@ class IPOViewSet(viewsets.ModelViewSet):
         if status_param:
             queryset = queryset.filter(status=status_param)
         return queryset
-    
+
+
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
@@ -148,6 +149,7 @@ def ipo_detail(request, pk):
         logger.info(f"Called DELETE API for id", exc_info=True)
         queryset.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 @api_view(['GET', 'POST'])
 def ipo_list(request):
