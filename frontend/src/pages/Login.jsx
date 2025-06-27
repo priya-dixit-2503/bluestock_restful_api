@@ -28,14 +28,15 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
-        <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center px-4">
+      <form onSubmit={handleSubmit} 
+      className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md">
+        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Login</h2>
 
         <input
           type="text"
           placeholder="Username"
-          className="w-full p-3 mb-4 border rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -44,15 +45,16 @@ function Login({ onLogin }) {
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-3 mb-4 border rounded"
+          className="w-full p-3 mb-6 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
 
-        {error && <div className="mb-4 text-red-600">{error}</div>}
+        {error && <div className="mb-4 p-2 text-sm text-red-600 bg-red-100 rounded">{error}</div>}
 
-        <button type="submit" className="w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+        <button type="submit" 
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded transition">
           Login
         </button>
       </form>
